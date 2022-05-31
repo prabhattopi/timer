@@ -16,9 +16,10 @@ export const Timer = (props) => {
         props.setMinutes(props.minutes-1)
         props.setSec(59)
       }
-      if(props.minutes<0){
+      if(props.minutes==0&&props.sec==0){
         props.setMinutes(0)
         props.setSec(0)
+        
         return
       }
       

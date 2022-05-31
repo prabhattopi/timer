@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   const [sec,setSec]=useState(0)
-  const [minutes,setMinutes]=useState(5)
+  const [minutes,setMinutes]=useState(1)
   return (
     <>
    <div className="Name">
