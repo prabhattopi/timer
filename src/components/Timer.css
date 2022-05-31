@@ -1,0 +1,13 @@
+.Timer{
+    width: 400px;
+    height: 300px;
+    background: #53ba5d;
+    /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(to bottom, #F4E2D8, #BA5370);
+    /*Chrome10-25,Safari5.1-6*/background: linear-gradient(to bottom, #F4E2D8, #53ba5b);
+    /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/box-shadow: 20px 0 10px rgba(0,0,0,0.6);
+    border-radius:20px ;
+    -webkit-border-radius:20px ;
+    -moz-border-radius:20px ;
+    -ms-border-radius:20px ;
+    -o-border-radius:20px ;
+}
