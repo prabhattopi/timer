@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 
 export const Timer = (props) => {
   const [roti, setRoti] = useState(0)
+  const [button, setbutton] = useState(0)
 
   var timer
   
@@ -34,8 +35,17 @@ export const Timer = (props) => {
 
  
   const handleStart=()=>{
-   
+
+   if(button==0){
     setRoti(1)
+    setbutton(1)
+   }
+   else if(button==1){
+     clearInterval(timer)
+     setRoti(0)
+     setbutton(0)
+
+   }
   
 
   }
@@ -57,7 +67,7 @@ export const Timer = (props) => {
        
       </div>
       <div style={{display:"flex",justifyContent:"space-around"}}>
-        <button onClick={handleStart} style={{padding:"10px",width:"100px",border:"none",outline:"none",background:"blue",borderRadius:"10px",color:"white",fontSize:"18px"}}>Start</button>
+        <button onClick={handleStart} style={{padding:"10px",width:"100px",border:"none",outline:"none",background:"blue",borderRadius:"10px",color:"white",fontSize:"18px"}}>{button==0?"Start":"Stop"}</button>
         <button onClick={handleReset}  style={{padding:"10px",width:"100px",border:"none",outline:"none",background:"blue",borderRadius:"10px",color:"white",fontSize:"18px"}}>Reset</button>
       </div>
     </div>
